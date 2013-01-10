@@ -1,5 +1,5 @@
 class Ckeditor::PicturesController < Ckeditor::ApplicationController
-
+  skip_authorization_check
   def index
     @pictures = Ckeditor.picture_model.find_all(ckeditor_pictures_scope)
     respond_with(@pictures) 
