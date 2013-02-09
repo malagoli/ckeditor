@@ -9,7 +9,6 @@ class Ckeditor::PicturesController < Ckeditor::ApplicationController
 
   def create
     @picture = Ckeditor::Picture.new
-    respond_with_asset(@picture)
     authorize! :create, @picture
     respond_with_asset(@picture)
   end
